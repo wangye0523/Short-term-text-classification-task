@@ -42,12 +42,13 @@ for xls in xls_file:
     for ss in s:
         ss= [ss,label_1,label_2]
         label_com.append(ss)
+label_comp=[]
+for ii1 in range(0,len(label_com),10):
+    label_comp.append(label_com[ii1])
+# label_com=label_com[0:50000]
 
-label_com=label_com[0:60000]
-
-
-with codecs.open('label.json', 'w', encoding='utf-8') as fff1:
-    json.dump(label_com,fff1,indent=4, ensure_ascii=False)
+# with codecs.open('label.json', 'w', encoding='utf-8') as fff1:
+#     json.dump(label_com,fff1,indent=4, ensure_ascii=False)
 
 
 all_sentence=[]
@@ -55,7 +56,7 @@ corpus= []
 first_label=[]
 second_label = []
 # f=f[0:5]
-for ff in label_com:
+for ff in label_comp:
     # print ff[0]
     # seg_list =[]
     seg_list = jieba.lcut(ff[0], cut_all=False)  # Use Precise mode to cut the word
