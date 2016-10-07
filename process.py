@@ -41,19 +41,33 @@ all_sentence_vec = all_sentence_tmp.toarray()
 from sklearn import cross_validation
 
 
-
-print '*****'*4
-
+#########################
 from sklearn.naive_bayes import MultinomialNB
-#
+MNB_model = MultinomialNB(alpha=0.01)
+scores1 = cross_validation.cross_val_score(MNB_model, all_sentence_vec, first_label, cv=5)
+scores2 = cross_validation.cross_val_score(MNB_model, all_sentence_vec, second_label, cv=5)
 
-clf = MultinomialNB(alpha=0.01)
-scores1 = cross_validation.cross_val_score(clf, all_sentence_vec, first_label, cv=5)
-scores2 = cross_validation.cross_val_score(clf, all_sentence_vec, second_label, cv=5)
-
+########################
+from sklearn.linear_model import LogisticRegression
+LR_model = LogisticRegression()
+scores1 = cross_validation.cross_val_score(LR_model, all_sentence_vec, first_label, cv=5)
+scores2 = cross_validation.cross_val_score(LR_model, all_sentence_vec, second_label, cv=5)
 
 print scores1,scores2
+
+#########
+##KNN
+from sklearn.neighbors import KNeighborsClassifier
+# fit a k-nearest neighbor model to the data
+knn_model = KNeighborsClassifier()
+scores1 = cross_validation.cross_val_score(knn_model, all_sentence_vec, first_label, cv=5)
+scores2 = cross_validation.cross_val_score(knn_model, all_sentence_vec, second_label, cv=5)
+
+
+
+
 exit()
+
 
 
 
