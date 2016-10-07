@@ -55,7 +55,7 @@ scores2 = cross_validation.cross_val_score(LR_model, all_sentence_vec, second_la
 
 print scores1,scores2
 
-#########
+#######
 ##KNN
 from sklearn.neighbors import KNeighborsClassifier
 # fit a k-nearest neighbor model to the data
