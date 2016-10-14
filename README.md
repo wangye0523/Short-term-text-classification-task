@@ -1,4 +1,6 @@
-# project
+# project--短文本分类
+
+
 
 ##数据的设置在 pre_process.py 的 46行
 ##RUN process.py 即可
