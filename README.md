@@ -1,7 +1,7 @@
 # project--短文本分类
 
-##update by OCT.13 
-###一共有40W条短文本，需要按大标题分8类，小标题分59类。都是supervised training。feature是用用的CountVectorizer（会再试试其他tfidf之类的），分类器暂时只用了MultinomialNB，准确率大概是68%和73%。等机器升了级，还会陆续尝试NN和SVM等主流分类器。
+###update by OCT.13 
+####一共有40W条短文本，需要按大标题分8类，小标题分59类。都是supervised training。feature是用用的CountVectorizer（会再试试其他tfidf之类的），分类器暂时只用了MultinomialNB，准确率大概是68%和73%。等机器升了级，还会陆续尝试NN和SVM等主流分类器。
 
 
 ###update by Oct.7
