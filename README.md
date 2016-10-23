@@ -1,4 +1,8 @@
 # project--短文本分类
+###update by OCT.22
+####买错了服务器内存条（服务器内存条不能mix brand，而且买错了ecc register，好吧我是猪），还是只能用1/10的数据集做实验。试了ti-idf提feature，而不再是之前利用全文本，准确率有提高到78%。我认为不明显。可能还是因为文本短。会继续尝试换分类器。
+
+
 
 ###update by OCT.13 
 ####一共有40W条短文本，需要按大标题分8类，小标题分59类。都是supervised training。feature是用用的CountVectorizer（会再试试其他tfidf之类的），分类器暂时只用了MultinomialNB，准确率大概是68%和73%。等机器升了级，还会陆续尝试NN和SVM等主流分类器。
