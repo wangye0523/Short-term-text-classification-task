@@ -76,4 +76,4 @@ with open('data.pickle', 'w') as fff:
     pickle.dump(second_label, fff, pickle.HIGHEST_PROTOCOL)
 
 
-print '****'*40
+print '*****'*40
