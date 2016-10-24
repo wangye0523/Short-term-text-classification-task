@@ -47,22 +47,34 @@ MNB_model = MultinomialNB(alpha=0.01)
 scores1 = cross_validation.cross_val_score(MNB_model, all_sentence_vec, first_label, cv=5)
 scores2 = cross_validation.cross_val_score(MNB_model, all_sentence_vec, second_label, cv=5)
 
+print 'score_1_first_NB=' , scores1,'score_2_second_NB=',scores2
+
+
 ########################
 from sklearn.linear_model import LogisticRegression
 LR_model = LogisticRegression()
-scores1 = cross_validation.cross_val_score(LR_model, all_sentence_vec, first_label, cv=5)
-scores2 = cross_validation.cross_val_score(LR_model, all_sentence_vec, second_label, cv=5)
+scores3 = cross_validation.cross_val_score(LR_model, all_sentence_vec, first_label, cv=5)
+scores4 = cross_validation.cross_val_score(LR_model, all_sentence_vec, second_label, cv=5)
 
-print scores1,scores2
+print 'score_3_first_LR=' ,scores3,  'score_4_second_LR=',scores4
 
-#######
+#########
 ##KNN
 from sklearn.neighbors import KNeighborsClassifier
 # fit a k-nearest neighbor model to the data
 knn_model = KNeighborsClassifier()
-scores1 = cross_validation.cross_val_score(knn_model, all_sentence_vec, first_label, cv=5)
-scores2 = cross_validation.cross_val_score(knn_model, all_sentence_vec, second_label, cv=5)
+scores5 = cross_validation.cross_val_score(knn_model, all_sentence_vec, first_label, cv=5)
+scores6 = cross_validation.cross_val_score(knn_model, all_sentence_vec, second_label, cv=5)
 
+print 'score_5_first_KNN=' , scores5, 'score_6_second_KNN=' ,scores6
+
+###SVC
+from sklearn.svm import SVC
+svc_model=SVC()
+scores7 = cross_validation.cross_val_score(svc_model, all_sentence_vec, first_label, cv=5)
+scores8 = cross_validation.cross_val_score(svc_model, all_sentence_vec, second_label, cv=5)
+
+print 'score_7_first_svc=' , scores5, 'score_8_second_svc=' ,scores6
 
 
 
