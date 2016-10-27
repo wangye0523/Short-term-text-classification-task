@@ -1,6 +1,6 @@
 # project--短文本分类
 ###update by OCT 27
-####服务器内存条还没到，还是用的1/10的数据集，试了SVC first 71% second 85% ,KNN first 71% second 78% by CountVectorizer. PS:切记数据量大了一定要用LinearSVM而不是SVM。速度可能快了1000倍不止。
+####服务器内存条还没到，还是用的1/10的数据集，试了SVC first 71% second 85% ,KNN first 71% second 78% by CountVectorizer, LR first 72% second 85%. PS:切记数据量大了一定要用LinearSVM而不是SVM。速度可能快了1000倍不止。
 
 
 ###update by OCT.22
