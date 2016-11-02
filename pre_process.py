@@ -42,9 +42,11 @@ for xls in xls_file:
     for ss in s:
         ss= [ss,label_1,label_2]
         label_com.append(ss)
+
 label_comp=[]
-for ii1 in range(0,len(label_com),10):
+for ii1 in range(0,len(label_com),1):
     label_comp.append(label_com[ii1])
+
 # label_com=label_com[0:50000]
 
 # with codecs.open('label.json', 'w', encoding='utf-8') as fff1:
@@ -55,23 +57,33 @@ all_sentence=[]
 corpus= []
 first_label=[]
 second_label = []
+all_extractag=[]
 # f=f[0:5]
 for ff in label_comp:
     # print ff[0]
     # seg_list =[]
     seg_list = jieba.lcut(ff[0], cut_all=False)  # Use Precise mode to cut the word
-    all_sentence.append(','.join(seg_list))
+    tttt_11 = jieba.analyse.extract_tags(''.join(seg_list), topK=10)
+    # all_sentence.append(','.join(tttt_11))
+    all_sentence.append(''.join(seg_list))
+    all_extractag.append(tttt_11)
     first_label.append(ff[1])
     second_label.append(ff[2])
 
 
-
+# for ii1 in range(len(given_documents)):
+#     seg_list = jieba.lcut(given_documents[ii1], cut_all=False)
+#     tttt_11 = jieba.analyse.extract_tags(''.join(seg_list), topK=30)
+#
+#     all.append(seg_list)
+#     all_extractag.append(tttt_11)
 
 import pickle
 
 with open('data.pickle', 'w') as fff:
     # Pickle the 'data' dictionary using the highest protocol available.
     pickle.dump(all_sentence, fff, pickle.HIGHEST_PROTOCOL)
+    pickle.dump(all_extractag, fff, pickle.HIGHEST_PROTOCOL)
     pickle.dump(first_label, fff, pickle.HIGHEST_PROTOCOL)
     pickle.dump(second_label, fff, pickle.HIGHEST_PROTOCOL)
 
