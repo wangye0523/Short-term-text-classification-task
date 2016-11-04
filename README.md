@@ -1,4 +1,9 @@
 # project--短文本分类
+###update by Nov.4
+####机器加大了内存，数据量从1/10增加到1/2。效果也有进步，在tfidf中，SVC效果最稳定，第一类准确率 从最高71% 增长到 将近75% ，第二类也将近85.5%和上星期性能差不多。 
+score_7_first_svc= [ 0.70273963  0.74962186  0.69065801  0.74307674  0.6214772 ] score_8_second_svc= [ 0.80618094  0.81494401  0.83450026  0.85453924  0.85884105]
+
+
 ###update by OCT 27
 ####服务器内存条还没到，还是用的1/10的数据集，试了SVC first 71% second 85% ,KNN first 71% second 78% by CountVectorizer, LR first 72% second 85%. PS:切记数据量大了一定要用LinearSVM而不是SVM。速度可能快了1000倍不止。
 
