@@ -1,4 +1,9 @@
 # project--短文本分类
+###Nov.18
+####extract label name as key_word for better segmentation.
+####data:1/8
+####feature:counter
+
 ###update by Nov.4
 ####机器加大了内存，数据量从1/10增加到1/2。效果也有进步，在tfidf中，SVC效果最稳定，第一类准确率 从最高71% 增长到 将近75% ，第二类也将近85.5%和上星期性能差不多。 
 score_7_first_svc= [ 0.70273963  0.74962186  0.69065801  0.74307674  0.6214772 ] score_8_second_svc= [ 0.80618094  0.81494401  0.83450026  0.85453924  0.85884105]
@@ -13,7 +18,7 @@ score_7_first_svc= [ 0.70273963  0.74962186  0.69065801  0.74307674  0.6214772 ]
 
 
 
-###update by OCT.13 
+###update by OCT.13
 ####一共有40W条短文本，需要按大标题分8类，小标题分59类。都是supervised training。feature是用用的CountVectorizer（会再试试其他tfidf之类的），分类器暂时只用了MultinomialNB，准确率大概是68%和73%。等机器升了级，还会陆续尝试NN和SVM等主流分类器。
 
 
@@ -29,7 +34,7 @@ score_7_first_svc= [ 0.70273963  0.74962186  0.69065801  0.74307674  0.6214772 ]
 
 
 ###update by Sep.20
-####处理了所有xls文件，清洗格式，写在label.jason里面。 
+####处理了所有xls文件，清洗格式，写在label.jason里面。
 
 ##数据的设置在 pre_process.py 的 46行
 ##RUN process.py 即可
