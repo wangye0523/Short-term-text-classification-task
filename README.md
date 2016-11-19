@@ -1,8 +1,6 @@
 # project--短文本分类
 ###Nov.18
-####extract label name as key_word for better segmentation.
-####data:1/8
-####feature:counter
+####extract label name as key_word for better segmentation. see log file
 
 ###update by Nov.4
 ####机器加大了内存，数据量从1/10增加到1/2。效果也有进步，在tfidf中，SVC效果最稳定，第一类准确率 从最高71% 增长到 将近75% ，第二类也将近85.5%和上星期性能差不多。 
