@@ -1,19 +1,6 @@
-# project--短文本分类
+# Short-term text classification task
 ###Nov.18
 ####extract label name as key_word for better segmentation. see log file
-
-###update by Nov.4
-####机器加大了内存，数据量从1/10增加到1/2。效果也有进步，在tfidf中，SVC效果最稳定，第一类准确率 从最高71% 增长到 将近75% ，第二类也将近85.5%和上星期性能差不多。 
-score_7_first_svc= [ 0.70273963  0.74962186  0.69065801  0.74307674  0.6214772 ] score_8_second_svc= [ 0.80618094  0.81494401  0.83450026  0.85453924  0.85884105]
-
-
-###update by OCT 27
-####服务器内存条还没到，还是用的1/10的数据集，试了SVC first 71% second 85% ,KNN first 71% second 78% by CountVectorizer, LR first 72% second 85%. PS:切记数据量大了一定要用LinearSVM而不是SVM。速度可能快了1000倍不止。
-
-
-###update by OCT.22
-####买错了服务器内存条（原来服务器内存条不能mix brand，而且买错了ecc register，好吧我是猪），还是只能用1/10的数据集做实验。试了ti-idf提feature，而不再是之前利用全文本，准确率有提高到78%。我认为不明显。可能还是因为文本短。会继续尝试换分类器。
-
 
 
 ###update by OCT.13
