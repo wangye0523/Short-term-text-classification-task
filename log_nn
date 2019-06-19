@@ -1,0 +1,40 @@
+/home/ye/anaconda2/bin/python /home/ye/下载/Sequential-RNN-Decoder-master/autoencoder_1.py
+Using TensorFlow backend.
+Namespace(GPU_proportion=0.9, M=2, batch_size=256, block_len=400, enc1=7, enc2=5, feedback=7, fixed_var=0.0, id='787234', learning_rate=0.001, noise_type='awgn', num_block_test=50000, num_block_train=50000, num_dec_iteration=6, num_epoch=100, num_hidden_unit=500, radar_power=20.0, radar_prob=0.05, snr_points=21, snr_test_end=10, snr_test_start=-10, train_loss='binary_crossentropy', train_snr=5.0)
+[ID] 787234
+2019-06-18 22:30:42.666159: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+2019-06-18 22:30:42.673961: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2593880000 Hz
+2019-06-18 22:30:42.674920: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x563cf28fc230 executing computations on platform Host. Devices:
+2019-06-18 22:30:42.674940: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-06-18 22:30:42.865055: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x563cf29a8060 executing computations on platform CUDA. Devices:
+2019-06-18 22:30:42.865089: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce GTX 1060 6GB, Compute Capability 6.1
+2019-06-18 22:30:42.865780: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties:
+name: GeForce GTX 1060 6GB major: 6 minor: 1 memoryClockRate(GHz): 1.7715
+pciBusID: 0000:05:00.0
+totalMemory: 5.92GiB freeMemory: 5.28GiB
+2019-06-18 22:30:42.865825: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-06-18 22:30:42.867843: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-18 22:30:42.867875: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0
+2019-06-18 22:30:42.867890: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N
+2019-06-18 22:30:42.868266: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 5459 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060 6GB, pci bus id: 0000:05:00.0, compute capability: 6.1)
+[Convolutional Code Codec] Encoder M  [2]  Generator Matrix  [[7 5]]  Feedback  7
+WARNING:tensorflow:From /home/ye/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ye/anaconda2/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/ye/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-06-18 22:47:09.215382: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.9.0 locally
+0.9563184945106507
+0.09926432950496673
+[Result Summary] SNRS is [-10.0, -9.0, -8.0, -7.0, -6.0, -5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
+[Result Summary] Turbo RNN BER is [0.3843178, 0.3695996, 0.3537641, 0.3357115, 0.31617675, 0.2948246, 0.2715701, 0.24684205, 0.22077595, 0.19372855, 0.1659141, 0.13830865, 0.11167205, 0.0864561, 0.063876, 0.0447387, 0.029306, 0.0177781, 0.0098911, 0.0049875, 0.00228905]
+[Result Summary] Turbo RNN BLER is [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.99916, 0.98152, 0.86214, 0.59992]
+2019-06-19 02:12:08.068032: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.24GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2019-06-19 02:12:08.070069: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.24GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+[Result Summary] Turbo RNN Throughput is [10001579.77261528, 11620030.383318236, 12764790.47889907, 14054862.264625765, 12092168.279415512, 14919950.697298845]
+
+Process finished with exit code 0
